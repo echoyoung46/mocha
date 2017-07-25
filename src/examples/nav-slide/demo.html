@@ -27,6 +27,10 @@
 	.btn-docs{float: right;margin:-0.05rem 0.1rem 0 0;font-size:0.14rem;padding:0.1rem;color: #fff;background-color: #3d81bb;border-radius:0.2rem;}
     body{padding-bottom: 10px !important;}
     
+    .mocha-nav-slide-container {
+        width: 96%;
+        margin: 0 auto;
+    }
     .mocha-nav-slide-controller-list {
         width: 6.5rem;
     }
@@ -35,41 +39,82 @@
         margin: 0 .01rem;
         font-size: .1rem;
     }
+    .mocha-nav-slide-controller-list .current {
+        color: #3d81bb;
+    }
+    .mocha-nav-slide-content {
+        height: 1rem;
+        margin-top: .2rem;
+    }
 	</style>
 </head>
 <body>
 
 <h2 class="h2">nav-slider(slider模块)<a href="/mocha/docs/nav-slide/" class="btn-docs" target="_blank">查看文档</a></h2>
 <h3 id="sliderdemo1">样式一(demo1)</h3>
-<div class="mocha-nav-slide-container">
-    <div class="mocha-nav-slide-controller">
-        <ul class="mocha-nav-slide-controller-list">
-            <li>最新</li>
-            <li>零度带你飞</li>
-            <li>荣耀进行时</li>
-            <li>王者职业教学?</li>
-            <li>谁是国服第一</li>
-            <li>赛事周刊</li>
-            <li>我来Carry</li>
-            <li>主宰猎人</li>
-            <li>荣耀大拷问</li>
-            <li>KPL本命英雄</li>
-        </ul>
+<div class="mocha-nav-slide-container" id="demo-container">
+    <div class="mocha-nav-slide-controller-container">    
+        <div class="mocha-nav-slide-controller">
+            <ul class="mocha-nav-slide-controller-list">
+                <li>最新</li>
+                <li>零度带你飞</li>
+                <li>荣耀进行时</li>
+                <li>王者职业教学</li>
+                <li>谁是国服第一</li>
+                <li>赛事周刊</li>
+                <li>我来Carry</li>
+                <li>主宰猎人</li>
+                <li>荣耀大拷问</li>
+                <li>KPL本命英雄</li>
+            </ul>
+        </div>
     </div>
     <div class="mocha-nav-slide-content swiper-container">
         <div class="mocha-nav-slide-wrapper swiper-wrapper">
-            <ul class="mocha-nav-slide-content-list slide-item">
-                <li class="mocha-nav-slide-content-item"></li>
+            <ul class="swiper-slide">
+                <li>最新</li>
             </ul>
-
+            <ul class="swiper-slide">
+                <li>零度带你飞</li>
+            </ul>
+            <ul class="swiper-slide">
+                <li>荣耀进行时</li>
+            </ul>
+            <ul class="swiper-slide">
+                <li>王者职业教学</li>
+            </ul>
+            <ul class="swiper-slide">
+                <li>谁是国服第一</li>
+            </ul>
+            <ul class="swiper-slide">
+                <li>赛事周刊</li>
+            </ul>
+            <ul class="swiper-slide">
+                <li>我来Carry</li>
+            </ul>
+            <ul class="swiper-slide">
+                <li>主宰猎人</li>
+            </ul>
+            <ul class="swiper-slide">
+                <li>荣耀大拷问</li>
+            </ul>
+            <ul class="swiper-slide">
+                <li>KPL本命英雄</li>
+            </ul>
         </div>
     </div>
 </div>
 
+<!-- <script src="../../js/zepto.min.js"></script> -->
+ <script src="//ossweb-img.qq.com/images/js/zepto/zepto.min.js"></script> 
 <script src="//game.gtimg.cn/images/yxzj/m/m201706/js/public/swiper.min.js"></script>
+<script src="//game.gtimg.cn/images/yxzj/m/m201706/js/public/underscore-min.js"></script>
 <script src="../../js/mocha.js"></script>
+<script src="nav-slide.js"></script>
 <script>
-
+    var navSlide = new NavSlide({
+        'container': '#demo-container'
+    });
 </script>
 </body>
 </html>
